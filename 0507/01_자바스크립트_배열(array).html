@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_자바스크립트_배열(array)</title>
+</head>
+<body>
+  <h2>01_자바스크립트_배열(array)</h2>
+  <p>자바스크립트 객체는 키(key)와 값(value)로 구성되어 있다</p>
+  <p>배열 데이터는 1개 또느 ㄴ여러개의 쌍으로 구성된다.</p>
+  <p>값(value)은 숫자, 문자열 뿐만 아니라 또 다른 객체(object)를 넣을 수 있다.</p>
+ 
+  <script>
+    const car = new Object();
+    car.type='현대자동차';
+    car.model='소나타';
+    car.color='흰색';
+
+    //객체를 호출하여 내용 출력하기
+    document.write('내가 선택한 자동차 회사는' + car.type + '이고 모델명은' + car.model+ '이며 색상은' + car.color +'입니다.');
+
+    const car2 ={ //객체를 사용하는 두번째 방법
+      type:'현대자동차',
+      model:'소나타',
+      color:'흰색'
+    }
+    document.write('<p>내가 선택한 자동차 회사는' + car2.type + '이고 모델명은' + car2.model+ '이며 색상은' + car2.color +'입니다.</p>');
+
+
+  </script>
+
+<h3>1. 객체를 복사하는 방법</h3>
+<ol>
+  <li>Shallow Copy</li>
+  <li>Deep+shallow</li>
+  <li>Deep Copy</li>
+</ol>
+<script>
+      let grandeur = {engine:'가솔린', cc:3000};
+      let aa = {name:'kildong', age:3000, car:grandeur};
+      // let bb = aa; //aa객체 내용에 grandeur객체의 속성값을 넣어서 복사
+
+      // console.log(Object.is(aa,bb));
+      // console.log('테스트');
+      // console.log(Object.is(aa.car, bb.car));
+
+      //두번째 방법 - 객체를 복사하지만 하위 객체는 참조만 하는 방밥(가장 많이 사용)
+      // let bb= Object.assign({},aa); //Object Deep Copy, 하위 Object Shallow Copy
+      // let bb ={...aa};
+      // onsole.log(Object.is(aa, bb));
+      // 
+      // console.log(Object.is(aa.car, bb.car));
+
+      //세번째 방법 - deep copy : 대표 객체 뿐만 아니라 하위 객체도 깊은 복사를 하는 방법
+      //가장 많은 메모리와 늦은 처리속도 보이기 때문에 3가지 객체 복사 방법중 제일 느리다.
+      let bb = JSON.parse(JSON.stringify(aa));
+
+      //stringify()함수: 자바스크립트 값을 json문자열로 변환해주는 함수
+      //console.log(Object.is(aa, bb));
+      //console.log(Object.is(aa.car, bb.car));
+
+      //객체 복사하기
+      let animals1 = ['사자','호랑이'];
+      // let animals2 = animals1;
+      // console.log(animals1);
+      // console.log(animals2);
+      // console.log(Object.is(animals1,animals2));
+
+      //사본 복사하기 deep copy, Object assign
+      // let animals2 = Object.assign([], animals1);
+      // console.log(animals1);
+      // console.log(animals2);
+
+      // let animals2 = [...animals1];
+      // console.log(animals1);
+      // console.log(animals2);
+
+      //4. deep copy, map
+      let animals2 = animals1.map((value,index)=>'index is ' + index + 'value is' + value);
+      console.log(animals1);
+      console.log(animals2);
+
+</script>
+</body>
+</html>

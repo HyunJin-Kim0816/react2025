@@ -1,0 +1,21 @@
+.txt_color1{
+ color: rgb(234, 0, 255); 
+}
+
+#bg_color1{
+  background: #ccc;
+}
+
+.border1{
+  border: 1px solid rgb(89, 107, 89);
+}
+.btn{
+  margin: 0px 5px;
+  width: 50px;
+  height: 40px;
+  font-size: 16px;
+}
+.num{
+  color: rgb(255, 0, 0);
+   font-size: 30px
+  ;}
