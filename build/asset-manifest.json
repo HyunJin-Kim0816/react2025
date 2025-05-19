@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react2025/static/css/main.d5c9b1c4.css",
+    "main.js": "/react2025/static/js/main.1dacd555.js",
+    "static/media/main2.png": "/react2025/static/media/main2.ab9cf8621e343c732809.png",
+    "static/media/main1.jpg": "/react2025/static/media/main1.f02375e45efb6eb97ca1.jpg",
+    "static/media/logo.png": "/react2025/static/media/logo.44ca419b572359f29364.png",
+    "index.html": "/react2025/index.html",
+    "main.d5c9b1c4.css.map": "/react2025/static/css/main.d5c9b1c4.css.map",
+    "main.1dacd555.js.map": "/react2025/static/js/main.1dacd555.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d5c9b1c4.css",
+    "static/js/main.1dacd555.js"
+  ]
+}
